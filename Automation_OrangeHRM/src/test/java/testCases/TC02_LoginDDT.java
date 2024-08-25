@@ -7,7 +7,7 @@ import pageObjects.LoginPage;
 import testBase.BaseClass;
 import utilities.DataProviders;
 
-public class TC03_LoginDDT extends BaseClass {
+public class TC02_LoginDDT extends BaseClass {
 
 	LoginPage loginPage;
 	HomePage homePage;

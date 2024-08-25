@@ -5,7 +5,7 @@
   <test thread-count="5" name="loginPageTest(failed)">
     <groups>
       <run>
-        <include name="datadriven"/>
+        <include name="master"/>
       </run>
     </groups>
     <classes>
@@ -16,6 +16,13 @@
           <include name="login" invocation-numbers="1 2"/>
         </methods>
       </class> <!-- testCases.TC03_LoginDDT -->
+      <class name="testCases.TC01_AdminPageTest">
+        <methods>
+          <include name="testSearchSystemUsers" invocation-numbers="2"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.TC01_AdminPageTest -->
     </classes>
   </test> <!-- loginPageTest(failed) -->
 </suite> <!-- Failed suite [masterSuite] -->
