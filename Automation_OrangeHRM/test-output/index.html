@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-masterSuite" class="navigator-link ">
-                    <span>C:\Users\vcvis\Documents\EclipseWorkspace\Automation_OrangeHRM\master.xml</span>
+                    <span>C:\Users\vcvis\Documents\git\Automation_OrangeHRM\grouping.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-masterSuite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,12 +103,12 @@
                     <div class="method-list-content failed suite-masterSuite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-masterSuite" title="testCases.TC03_LoginDDT" class="method navigator-link" hash-for-method="login(xyz, xyz, invalid)">login(xyz, xyz, invalid)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-masterSuite" title="testCases.TC03_LoginDDT" class="method navigator-link" hash-for-method="login(habsn, bhjn, invalid)">login(habsn, bhjn, invalid)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-masterSuite" title="testCases.TC03_LoginDDT" class="method navigator-link" hash-for-method="login(habsn, bhjn, invalid)">login(habsn, bhjn, invalid)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-masterSuite" title="testCases.TC03_LoginDDT" class="method navigator-link" hash-for-method="login(xyz, xyz, invalid)">login(xyz, xyz, invalid)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-masterSuite -->
@@ -150,10 +150,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="login(xyz, xyz, invalid)">
-                  </a> <!-- login(xyz, xyz, invalid) -->
+                  <a name="login(habsn, bhjn, invalid)">
+                  </a> <!-- login(habsn, bhjn, invalid) -->
                   <span class="method-name">login</span>
-                  <span class="parameters">(xyz,xyz,invalid)</span>
+                  <span class="parameters">(habsn,bhjn,invalid)</span>
                   <div class="stack-trace">java.lang.AssertionError: Invalid credentials.
 	at testCases.TC03_LoginDDT.login(TC03_LoginDDT.java:31)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
@@ -163,10 +163,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="login(habsn, bhjn, invalid)">
-                  </a> <!-- login(habsn, bhjn, invalid) -->
+                  <a name="login(xyz, xyz, invalid)">
+                  </a> <!-- login(xyz, xyz, invalid) -->
                   <span class="method-name">login</span>
-                  <span class="parameters">(habsn,bhjn,invalid)</span>
+                  <span class="parameters">(xyz,xyz,invalid)</span>
                   <div class="stack-trace">java.lang.AssertionError: Invalid credentials.
 	at testCases.TC03_LoginDDT.login(TC03_LoginDDT.java:31)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
@@ -203,16 +203,28 @@
         </div> <!-- panel masterSuite -->
         <div panel-name="test-xml-masterSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\vcvis\Documents\EclipseWorkspace\Automation_OrangeHRM\master.xml</span>
+            <span class="header-content">C:\Users\vcvis\Documents\git\Automation_OrangeHRM\grouping.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;masterSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;groups&gt;
+    &lt;run&gt;
+      &lt;include name=&quot;datadriven&quot;/&gt;
+    &lt;/run&gt;
+  &lt;/groups&gt;
+  &lt;groups&gt;
+    &lt;run&gt;
+      &lt;include name=&quot;datadriven&quot;/&gt;
+    &lt;/run&gt;
+  &lt;/groups&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;loginPageTest&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;testCases.TC00_LoginPageTest&quot;/&gt;
+      &lt;class name=&quot;testCases.TC01_AdminPageTest&quot;/&gt;
       &lt;class name=&quot;testCases.TC03_LoginDDT&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- loginPageTest --&gt;
@@ -227,7 +239,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">loginPageTest (1 class)</span>
+                <span class="test-name">loginPageTest (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -237,6 +249,22 @@
             <span class="header-content">Groups for masterSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">datadriven</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">login</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">master</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">login</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-masterSuite" class="panel">
@@ -257,24 +285,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'login')
 data.setCell(0, 2, 'testCases.TC03_LoginDDT')
-data.setCell(0, 3, 20161);
+data.setCell(0, 3, 12158);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'login')
 data.setCell(1, 2, 'testCases.TC03_LoginDDT')
-data.setCell(1, 3, 11729);
+data.setCell(1, 3, 11101);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'login')
 data.setCell(2, 2, 'testCases.TC03_LoginDDT')
-data.setCell(2, 3, 11373);
+data.setCell(2, 3, 5810);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'login')
 data.setCell(3, 2, 'testCases.TC03_LoginDDT')
-data.setCell(3, 3, 3555);
+data.setCell(3, 3, 3547);
 window.suiteTableData['masterSuite']= { tableData: data, tableDiv: 'times-div-masterSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 46 seconds</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-masterSuite">
               </div> <!-- times-div-masterSuite -->
             </div> <!-- times-div -->
@@ -289,9 +317,29 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-masterSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCases.TC00_LoginPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginWithValidCredentials</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCases.TC01_AdminPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginWithValidCredentials</span>
+                <br/>
+                <span class="ignored-method-name">logout</span>
+                <br/>
+                <span class="ignored-method-name">clickAdminButton</span>
+                <br/>
+                <span class="ignored-method-name">testSearchSystemUsers</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-masterSuite" class="panel">
@@ -301,34 +349,34 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.TC03_LoginDDT</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
+              <div class="configuration-class before">
                 <span class="method-name">setUp(chrome)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">login(Admin, admin123, valid)</span>
-                <span class="method-start">54434 ms</span>
+                <span class="method-start">52187 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">login(xyz, xyz, invalid)</span>
-                <span class="method-start">74602 ms</span>
+                <span class="method-start">58010 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">login(habsn, bhjn, invalid)</span>
-                <span class="method-start">86337 ms</span>
+                <span class="method-start">70173 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">login(Admin, admin123, valid)</span>
-                <span class="method-start">97715 ms</span>
+                <span class="method-start">81276 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-test after">
+              <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">101277 ms</span>
-              </div> <!-- configuration-test after -->
+                <span class="method-start">84829 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

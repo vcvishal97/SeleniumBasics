@@ -2,7 +2,6 @@ package testCases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import testBase.BaseClass;
@@ -13,7 +12,7 @@ public class TC03_LoginDDT extends BaseClass {
 	LoginPage loginPage;
 	HomePage homePage;
 	
-	@Test(dataProvider = "loginCredentials", dataProviderClass = DataProviders.class)
+	@Test(groups = {"master", "datadriven"}, dataProvider = "loginCredentials", dataProviderClass = DataProviders.class)
 	public void login(String username, String password, String result) {
 		try {
 			loginPage = new LoginPage(driver);
