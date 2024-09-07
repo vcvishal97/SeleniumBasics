@@ -6,3 +6,12 @@
 2024-09-07 17:55:21,636(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest **** Starting loginWithValidCredentials ***
 2024-09-07 17:55:25,991(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest Validating
 2024-09-07 17:55:31,684(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest Logging out.
+2024-09-07 18:46:24,086(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest **** Starting loginWithValidCredentials ***
+2024-09-07 18:46:27,543(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest Validating
+2024-09-07 18:46:33,834(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest Logging out.
+2024-09-07 18:52:32,413(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest **** Starting loginWithValidCredentials ***
+2024-09-07 18:52:42,389(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest Validating
+2024-09-07 18:52:54,419(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest Logging out.
+2024-09-07 18:54:37,750(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest **** Starting loginWithValidCredentials ***
+2024-09-07 18:54:40,311(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest Validating
+2024-09-07 18:54:46,078(HH:mm:ss.SSS) [main] INFO  testCases.TC01_AdminPageTest Logging out.

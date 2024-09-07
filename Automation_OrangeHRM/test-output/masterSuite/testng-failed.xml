@@ -15,10 +15,13 @@
     <classes>
       <class name="testCases.TC01_AdminPageTest">
         <methods>
-          <include name="testSearchInvalidSystemUsers" invocation-numbers="0 1"/>
+          <include name="testSearchInvalidSystemUsers"/>
+          <include name="clickAdminButton"/>
           <include name="tearDown"/>
-          <include name="testSearchValidSystemUsers" invocation-numbers="0 1"/>
+          <include name="testSearchValidSystemUsers"/>
+          <include name="loginWithValidCredentials"/>
           <include name="setUp"/>
+          <include name="logout"/>
         </methods>
       </class> <!-- testCases.TC01_AdminPageTest -->
     </classes>
