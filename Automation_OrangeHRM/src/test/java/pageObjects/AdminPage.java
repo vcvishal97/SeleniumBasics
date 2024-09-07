@@ -1,5 +1,8 @@
 package pageObjects;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,14 +28,27 @@ public class AdminPage extends BasePage {
 	@FindBy(xpath = "//span[contains(normalize-space(),'Record Found')]")
 	WebElement recordsFound;
 	
-	@FindBy(xpath = "//span[contains(normalize-space(),'Records Found')]")
+	@FindBy(xpath = "//span[contains(normalize-space(),'No Records Found')]")
 	WebElement noRecordsFound;
 	
-	public String getRecordsFound() {
+	public boolean getNoRecordsFoundStatus() {
 		try {
-			return recordsFound.getText();
+			return noRecordsFound.isDisplayed();
 		} catch (Exception e) {
-			return "(Exception) No records found.";
+			return false;
+		}
+	}
+	
+	public boolean getRecordsFoundStatus() {
+		try {
+			String results = recordsFound.getText();
+			String regex = "\\d+";
+			Pattern pattern = Pattern.compile(regex);
+			Matcher matcher = pattern.matcher(results);
+			return matcher.find();
+			
+		} catch (Exception e) {
+			return false;
 		}
 		
 	}

@@ -1,7 +1,5 @@
 package testCases;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.AdminPage;
@@ -14,6 +12,7 @@ public class TC01_AdminPageTest extends BaseClass{
 
 	LoginPage loginPage;
 	HomePage homePage;
+	AdminPage adminPage;
 	
 	@Test(groups = {"master", "regression"}, priority = 0)
 	public void loginWithValidCredentials() {
@@ -23,7 +22,6 @@ public class TC01_AdminPageTest extends BaseClass{
 			logger.info("**** Starting loginWithValidCredentials ***");
 			String username = property.readProperty("username");
 			String password = property.readProperty("password");
-			System.out.println(username + "," + password);
 			doLogin(loginPage, username, password);
 			logger.info("Validating");
 			
@@ -44,27 +42,30 @@ public class TC01_AdminPageTest extends BaseClass{
 		}
 	}
 	
-	@Test(groups = {"master", "regression"}, priority = 2, dataProvider = "searchTerms", dataProviderClass = DataProviders.class)
-	public void testSearchSystemUsers(String searchTerm) {
-		AdminPage adminPage = new AdminPage(driver);
-		adminPage.setUsername(searchTerm);
-		adminPage.clickSearch();
-		String results = adminPage.getRecordsFound();
-		if(results.equals("(Exception) No records found."))
-			Assert.fail(results);
-		else {
-			String regex = "\\d+";
-			Pattern pattern = Pattern.compile(regex);
-			Matcher matcher = pattern.matcher(results);
-			Assert.assertTrue(matcher.find(), "No records found.");
-		}
+	@Test(groups = {"master", "regression"}, priority = 2, dataProvider = "validSearchTerms", dataProviderClass = DataProviders.class)
+	public void testSearchValidSystemUsers(String searchTerm) {
+		searchSystemUsers(searchTerm);
+		Assert.assertTrue(adminPage.getRecordsFoundStatus(), "No records found. Searched with invalid data instead on a valid one.");
 	}
 	
-	@Test(groups = {"master", "regression"}, priority = 3)
+	@Test(groups = {"master", "regression"}, priority = 3, dataProvider = "invalidSearchTerms", dataProviderClass = DataProviders.class)
+	public void testSearchInvalidSystemUsers(String searchTerm) {
+		searchSystemUsers(searchTerm);
+		Assert.assertTrue(adminPage.getNoRecordsFoundStatus(), "Records found. Searched with valid data instead of an invalid one.");
+	}
+	
+	@Test(groups = {"master", "regression"}, priority = 4)
 	public void logout() {
 		logger.info("Logging out.");
 		homePage.clickUserDropdownButton();
 		loginPage.clickLogout();
+	}
+	
+	public void searchSystemUsers(String searchTerm) {
+		if(adminPage == null)
+			adminPage = new AdminPage(driver);
+		adminPage.setUsername(searchTerm);
+		adminPage.clickSearch();
 	}
 	
 }

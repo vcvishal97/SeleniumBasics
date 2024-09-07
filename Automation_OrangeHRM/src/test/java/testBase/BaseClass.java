@@ -1,10 +1,15 @@
 package testBase;
 
+import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -48,6 +53,16 @@ public class BaseClass {
 		loginPage.setUsername(username);
 		loginPage.setPassword(password);
 		loginPage.clickLogin();
+	}
+	
+	public String captureScreen(String testName) {
+		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		String targetFilePath = ".\\screenshots\\" + testName + "_" + timeStamp + ".png";
+		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+		File targetFile = new File(targetFilePath);
+		sourceFile.renameTo(targetFile);
+		return targetFilePath;
 	}
 	
 }

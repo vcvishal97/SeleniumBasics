@@ -32,6 +32,14 @@ public class LoginPage extends BasePage{
 		logoutButton.click();
 	}
 	
+	public boolean isInvalidAlertPresent() {
+		try {
+			return invalidAlert.isDisplayed();
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
 	public String getInvalidAlertMessage() {
 		return invalidAlert.getText();
 	}

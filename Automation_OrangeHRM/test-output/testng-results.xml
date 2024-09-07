@@ -1,261 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="9" failed="3" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-25T09:22:20 IST" name="masterSuite" finished-at="2024-08-25T09:23:49 IST" duration-ms="89347">
+  <suite started-at="2024-09-07T17:55:12 IST" name="masterSuite" finished-at="2024-09-07T17:55:33 IST" duration-ms="20615">
     <groups>
-      <group name="datadriven">
-        <method signature="TC03_LoginDDT.login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC03_LoginDDT@702657cc]" name="login" class="testCases.TC03_LoginDDT"/>
-      </group> <!-- datadriven -->
       <group name="regression">
-        <method signature="TC01_AdminPageTest.loginWithValidCredentials()[pri:0, instance:testCases.TC01_AdminPageTest@43bc63a3]" name="loginWithValidCredentials" class="testCases.TC01_AdminPageTest"/>
-        <method signature="TC01_AdminPageTest.clickAdminButton()[pri:1, instance:testCases.TC01_AdminPageTest@43bc63a3]" name="clickAdminButton" class="testCases.TC01_AdminPageTest"/>
-        <method signature="TC01_AdminPageTest.testSearchSystemUsers(java.lang.String)[pri:2, instance:testCases.TC01_AdminPageTest@43bc63a3]" name="testSearchSystemUsers" class="testCases.TC01_AdminPageTest"/>
-        <method signature="TC01_AdminPageTest.logout()[pri:3, instance:testCases.TC01_AdminPageTest@43bc63a3]" name="logout" class="testCases.TC01_AdminPageTest"/>
+        <method signature="TC01_AdminPageTest.loginWithValidCredentials()[pri:0, instance:testCases.TC01_AdminPageTest@1165b38]" name="loginWithValidCredentials" class="testCases.TC01_AdminPageTest"/>
+        <method signature="TC01_AdminPageTest.clickAdminButton()[pri:1, instance:testCases.TC01_AdminPageTest@1165b38]" name="clickAdminButton" class="testCases.TC01_AdminPageTest"/>
+        <method signature="TC01_AdminPageTest.testSearchValidSystemUsers(java.lang.String)[pri:2, instance:testCases.TC01_AdminPageTest@1165b38]" name="testSearchValidSystemUsers" class="testCases.TC01_AdminPageTest"/>
+        <method signature="TC01_AdminPageTest.testSearchInvalidSystemUsers(java.lang.String)[pri:3, instance:testCases.TC01_AdminPageTest@1165b38]" name="testSearchInvalidSystemUsers" class="testCases.TC01_AdminPageTest"/>
+        <method signature="TC01_AdminPageTest.logout()[pri:4, instance:testCases.TC01_AdminPageTest@1165b38]" name="logout" class="testCases.TC01_AdminPageTest"/>
       </group> <!-- regression -->
-      <group name="sanity">
-        <method signature="TC00_LoginPageTest.loginWithValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC00_LoginPageTest@36ebc363]" name="loginWithValidCredentials" class="testCases.TC00_LoginPageTest"/>
-      </group> <!-- sanity -->
       <group name="master">
-        <method signature="TC00_LoginPageTest.loginWithValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC00_LoginPageTest@36ebc363]" name="loginWithValidCredentials" class="testCases.TC00_LoginPageTest"/>
-        <method signature="TC01_AdminPageTest.loginWithValidCredentials()[pri:0, instance:testCases.TC01_AdminPageTest@43bc63a3]" name="loginWithValidCredentials" class="testCases.TC01_AdminPageTest"/>
-        <method signature="TC03_LoginDDT.login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC03_LoginDDT@702657cc]" name="login" class="testCases.TC03_LoginDDT"/>
-        <method signature="TC01_AdminPageTest.clickAdminButton()[pri:1, instance:testCases.TC01_AdminPageTest@43bc63a3]" name="clickAdminButton" class="testCases.TC01_AdminPageTest"/>
-        <method signature="TC01_AdminPageTest.testSearchSystemUsers(java.lang.String)[pri:2, instance:testCases.TC01_AdminPageTest@43bc63a3]" name="testSearchSystemUsers" class="testCases.TC01_AdminPageTest"/>
-        <method signature="TC01_AdminPageTest.logout()[pri:3, instance:testCases.TC01_AdminPageTest@43bc63a3]" name="logout" class="testCases.TC01_AdminPageTest"/>
+        <method signature="TC01_AdminPageTest.loginWithValidCredentials()[pri:0, instance:testCases.TC01_AdminPageTest@1165b38]" name="loginWithValidCredentials" class="testCases.TC01_AdminPageTest"/>
+        <method signature="TC01_AdminPageTest.clickAdminButton()[pri:1, instance:testCases.TC01_AdminPageTest@1165b38]" name="clickAdminButton" class="testCases.TC01_AdminPageTest"/>
+        <method signature="TC01_AdminPageTest.testSearchValidSystemUsers(java.lang.String)[pri:2, instance:testCases.TC01_AdminPageTest@1165b38]" name="testSearchValidSystemUsers" class="testCases.TC01_AdminPageTest"/>
+        <method signature="TC01_AdminPageTest.testSearchInvalidSystemUsers(java.lang.String)[pri:3, instance:testCases.TC01_AdminPageTest@1165b38]" name="testSearchInvalidSystemUsers" class="testCases.TC01_AdminPageTest"/>
+        <method signature="TC01_AdminPageTest.logout()[pri:4, instance:testCases.TC01_AdminPageTest@1165b38]" name="logout" class="testCases.TC01_AdminPageTest"/>
       </group> <!-- master -->
     </groups>
-    <test started-at="2024-08-25T09:22:20 IST" name="loginPageTest" finished-at="2024-08-25T09:23:49 IST" duration-ms="89347">
-      <class name="testCases.TC03_LoginDDT">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC03_LoginDDT@702657cc]" started-at="2024-08-25T09:23:10 IST" name="setUp" finished-at="2024-08-25T09:23:18 IST" duration-ms="8118" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC03_LoginDDT@702657cc]" started-at="2024-08-25T09:23:19 IST" name="login" data-provider="loginCredentials" finished-at="2024-08-25T09:23:23 IST" duration-ms="4236" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[valid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC03_LoginDDT@702657cc]" started-at="2024-08-25T09:23:23 IST" name="login" data-provider="loginCredentials" finished-at="2024-08-25T09:23:34 IST" duration-ms="11318" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[xyz]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[xyz]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[invalid]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Invalid credentials.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Invalid credentials.
-at org.testng.Assert.fail(Assert.java:111)
-at testCases.TC03_LoginDDT.login(TC03_LoginDDT.java:30)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC03_LoginDDT@702657cc]" started-at="2024-08-25T09:23:34 IST" name="login" data-provider="loginCredentials" finished-at="2024-08-25T09:23:45 IST" duration-ms="11181" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[habsn]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[bhjn]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[invalid]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Invalid credentials.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Invalid credentials.
-at org.testng.Assert.fail(Assert.java:111)
-at testCases.TC03_LoginDDT.login(TC03_LoginDDT.java:30)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC03_LoginDDT@702657cc]" started-at="2024-08-25T09:23:45 IST" name="login" data-provider="loginCredentials" finished-at="2024-08-25T09:23:49 IST" duration-ms="3263" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[valid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC03_LoginDDT@702657cc]" started-at="2024-08-25T09:23:49 IST" name="tearDown" finished-at="2024-08-25T09:23:49 IST" duration-ms="443" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC03_LoginDDT -->
-      <class name="testCases.TC00_LoginPageTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC00_LoginPageTest@36ebc363]" started-at="2024-08-25T09:22:20 IST" name="setUp" finished-at="2024-08-25T09:22:31 IST" duration-ms="10979" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="loginWithValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC00_LoginPageTest@36ebc363]" started-at="2024-08-25T09:22:32 IST" name="loginWithValidCredentials" data-provider="validCredentials" finished-at="2024-08-25T09:22:38 IST" duration-ms="6159" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithValidCredentials -->
-        <test-method signature="loginWithValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC00_LoginPageTest@36ebc363]" started-at="2024-08-25T09:22:38 IST" name="loginWithValidCredentials" data-provider="validCredentials" finished-at="2024-08-25T09:22:41 IST" duration-ms="3635" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithValidCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC00_LoginPageTest@36ebc363]" started-at="2024-08-25T09:22:41 IST" name="tearDown" finished-at="2024-08-25T09:22:42 IST" duration-ms="481" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC00_LoginPageTest -->
+    <test started-at="2024-09-07T17:55:12 IST" name="loginPageTest" finished-at="2024-09-07T17:55:33 IST" duration-ms="20615">
       <class name="testCases.TC01_AdminPageTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC01_AdminPageTest@43bc63a3]" started-at="2024-08-25T09:22:42 IST" name="setUp" finished-at="2024-08-25T09:22:53 IST" duration-ms="10794" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC01_AdminPageTest@1165b38]" started-at="2024-09-07T17:55:13 IST" name="setUp" finished-at="2024-09-07T17:55:21 IST" duration-ms="8300" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -266,15 +32,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginWithValidCredentials()[pri:0, instance:testCases.TC01_AdminPageTest@43bc63a3]" started-at="2024-08-25T09:22:53 IST" name="loginWithValidCredentials" finished-at="2024-08-25T09:22:55 IST" duration-ms="2719" status="PASS">
+        <test-method signature="loginWithValidCredentials()[pri:0, instance:testCases.TC01_AdminPageTest@1165b38]" started-at="2024-09-07T17:55:21 IST" name="loginWithValidCredentials" finished-at="2024-09-07T17:55:26 IST" duration-ms="4834" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredentials -->
-        <test-method signature="clickAdminButton()[pri:1, instance:testCases.TC01_AdminPageTest@43bc63a3]" started-at="2024-08-25T09:22:55 IST" name="clickAdminButton" finished-at="2024-08-25T09:22:57 IST" duration-ms="1297" status="PASS">
+        <test-method signature="clickAdminButton()[pri:1, instance:testCases.TC01_AdminPageTest@1165b38]" started-at="2024-09-07T17:55:26 IST" name="clickAdminButton" finished-at="2024-09-07T17:55:27 IST" duration-ms="1201" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickAdminButton -->
-        <test-method signature="testSearchSystemUsers(java.lang.String)[pri:2, instance:testCases.TC01_AdminPageTest@43bc63a3]" started-at="2024-08-25T09:22:57 IST" name="testSearchSystemUsers" data-provider="searchTerms" finished-at="2024-08-25T09:22:58 IST" duration-ms="1204" status="PASS">
+        <test-method signature="testSearchValidSystemUsers(java.lang.String)[pri:2, instance:testCases.TC01_AdminPageTest@1165b38]" started-at="2024-09-07T17:55:27 IST" name="testSearchValidSystemUsers" data-provider="validSearchTerms" finished-at="2024-09-07T17:55:29 IST" duration-ms="1813" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -284,73 +50,45 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSearchSystemUsers -->
-        <test-method signature="testSearchSystemUsers(java.lang.String)[pri:2, instance:testCases.TC01_AdminPageTest@43bc63a3]" started-at="2024-08-25T09:22:58 IST" name="testSearchSystemUsers" data-provider="searchTerms" finished-at="2024-08-25T09:22:59 IST" duration-ms="627" status="PASS">
+        </test-method> <!-- testSearchValidSystemUsers -->
+        <test-method signature="testSearchValidSystemUsers(java.lang.String)[pri:2, instance:testCases.TC01_AdminPageTest@1165b38]" started-at="2024-09-07T17:55:29 IST" name="testSearchValidSystemUsers" data-provider="validSearchTerms" finished-at="2024-09-07T17:55:30 IST" duration-ms="711" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[FMLName]]>
+                <![CDATA[Admin]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSearchSystemUsers -->
-        <test-method signature="testSearchSystemUsers(java.lang.String)[pri:2, instance:testCases.TC01_AdminPageTest@43bc63a3]" started-at="2024-08-25T09:22:59 IST" name="testSearchSystemUsers" data-provider="searchTerms" finished-at="2024-08-25T09:23:09 IST" duration-ms="10245" status="FAIL">
+        </test-method> <!-- testSearchValidSystemUsers -->
+        <test-method signature="testSearchInvalidSystemUsers(java.lang.String)[pri:3, instance:testCases.TC01_AdminPageTest@1165b38]" started-at="2024-09-07T17:55:30 IST" name="testSearchInvalidSystemUsers" data-provider="invalidSearchTerms" finished-at="2024-09-07T17:55:30 IST" duration-ms="662" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[aaaaaa]]>
+                <![CDATA[AAA]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[(Exception) No records found.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: (Exception) No records found.
-at org.testng.Assert.fail(Assert.java:111)
-at testCases.TC01_AdminPageTest.testSearchSystemUsers(TC01_AdminPageTest.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSearchSystemUsers -->
-        <test-method signature="logout()[pri:3, instance:testCases.TC01_AdminPageTest@43bc63a3]" started-at="2024-08-25T09:23:09 IST" name="logout" finished-at="2024-08-25T09:23:10 IST" duration-ms="1073" status="PASS">
+        </test-method> <!-- testSearchInvalidSystemUsers -->
+        <test-method signature="testSearchInvalidSystemUsers(java.lang.String)[pri:3, instance:testCases.TC01_AdminPageTest@1165b38]" started-at="2024-09-07T17:55:30 IST" name="testSearchInvalidSystemUsers" data-provider="invalidSearchTerms" finished-at="2024-09-07T17:55:31 IST" duration-ms="790" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[BBB]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchInvalidSystemUsers -->
+        <test-method signature="logout()[pri:4, instance:testCases.TC01_AdminPageTest@1165b38]" started-at="2024-09-07T17:55:31 IST" name="logout" finished-at="2024-09-07T17:55:32 IST" duration-ms="1133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC01_AdminPageTest@43bc63a3]" started-at="2024-08-25T09:23:10 IST" name="tearDown" finished-at="2024-08-25T09:23:10 IST" duration-ms="400" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC01_AdminPageTest@1165b38]" started-at="2024-09-07T17:55:32 IST" name="tearDown" finished-at="2024-09-07T17:55:33 IST" duration-ms="484" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

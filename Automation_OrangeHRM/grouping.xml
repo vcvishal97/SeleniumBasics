@@ -4,17 +4,20 @@
   <groups>
 	  <run>
 <!-- 	  	<include name="sanity"/> -->
-	  	<include name="master"/>
-<!-- 	  	<include name="regression"/> -->
+<!--  	  	<include name="master"/> -->
+	  	<include name="regression"/>
 <!-- 	  	<include name="datadriven"/> -->
 	  </run>
   </groups>
+  <listeners>
+  	<listener class-name="utilities.ExtentReportManager"/>
+  </listeners>
+  <parameter name="os" value="windows"/>
   <parameter name="browser" value="chrome"/>
   <test name="loginPageTest">
     <classes>
-      <class name="testCases.TC00_LoginPageTest"/>
       <class name="testCases.TC01_AdminPageTest"/>
 	  <class name="testCases.TC02_LoginDDT"/>
     </classes>
   </test>
-</suite> <!-- Suite -->
+</suite>

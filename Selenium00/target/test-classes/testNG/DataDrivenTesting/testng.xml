@@ -7,10 +7,10 @@
       <class name="testNG.DataDrivenTesting.TestCase02_XML_TutorialsNinja"/>
     </classes>
   </test>
-  <test name="TestEdge">
-  	<parameter name="browser" value="eDGe"></parameter>
-    <classes>
-      <class name="testNG.DataDrivenTesting.TestCase02_XML_TutorialsNinja"/>
-    </classes>
-  </test>
+<!--   <test name="TestEdge"> -->
+<!--   	<parameter name="browser" value="eDGe"></parameter> -->
+<!--     <classes> -->
+<!--       <class name="testNG.DataDrivenTesting.TestCase02_XML_TutorialsNinja"/> -->
+<!--     </classes> -->
+<!--   </test> -->
 </suite>

@@ -12,26 +12,35 @@ public class TC02_LoginDDT extends BaseClass {
 	LoginPage loginPage;
 	HomePage homePage;
 	
-	@Test(groups = {"master", "datadriven"}, dataProvider = "loginCredentials", dataProviderClass = DataProviders.class)
-	public void login(String username, String password, String result) {
+	@Test(priority = 1, groups = {"master", "datadriven"}, dataProvider = "validCredentials", dataProviderClass = DataProviders.class)
+	public void validLogin(String username, String password) {
 		try {
 			loginPage = new LoginPage(driver);
 			homePage = new HomePage(driver);
-			logger.info("**** Starting TC03_LoginDDT ***");
+			logger.info("**** Starting loginWithValidCredentials ***");
 			doLogin(loginPage, username, password);
 			logger.info("Validating");
-			boolean loginStatus = homePage.isUserDropDownPresent();
-			if(loginStatus) {
-				logger.info("Logged in.");
-				logout();
-				Assert.assertTrue(loginStatus);
-			}
-			else
-				Assert.fail("Invalid credentials.");
+			Assert.assertTrue(homePage.isUserDropDownPresent());
+			logout();
 		} catch (Exception e) {
 			logger.error("Test failed.");
 			logger.debug("Debug logs.");
-			Assert.fail(e.getMessage());
+			Assert.fail();
+		}
+	}
+	
+	@Test(priority = 2, groups = {"master", "datadriven"}, dataProvider = "invalidCredentials", dataProviderClass = DataProviders.class)
+	public void invalidLogin(String username, String password) {
+		try {
+			loginPage = new LoginPage(driver);
+			logger.info("**** Starting loginWithInvalidCredentials ***");
+			doLogin(loginPage, username, password);
+			logger.info("Validating");
+			Assert.assertTrue(loginPage.isInvalidAlertPresent());
+		} catch (Exception e) {
+			logger.error("Test failed.");
+			logger.debug("Debug logs.");
+			Assert.fail();
 		}
 	}
 	

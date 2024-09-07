@@ -4,7 +4,6 @@
   <parameter name="browser" value="chrome"/>
   <test name="loginPageTest">
     <classes>
-      <class name="testCases.TC00_LoginPageTest"/>
 <!--       <class name="testCases.TC01_AdminPageTest"/> -->
 <!-- 	  <class name="testCases.TC02_LoginDDT"/> -->
     </classes>
