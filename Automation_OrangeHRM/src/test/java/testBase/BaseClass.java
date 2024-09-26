@@ -40,15 +40,17 @@ public class BaseClass {
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			
 			switch(os.toLowerCase()) {
-				case "windows": capabilities.setPlatform(Platform.WIN10);	break;
-				case "mac": capabilities.setPlatform(Platform.MAC);			break;
-				default: logger.error("No matching OS found."); 			return;
+				case "windows"	: capabilities.setPlatform(Platform.WIN10);	break;
+				case "mac"		: capabilities.setPlatform(Platform.MAC);	break;
+				case "linux" 	: capabilities.setPlatform(Platform.LINUX);	break;
+				default			: logger.error("No matching OS found."); 	return;
 			}
 			
 			switch(browser.toLowerCase()) {
-				case "chrome": capabilities.setBrowserName("chrome");		break;
-				case "edge": capabilities.setBrowserName("MicrosoftEdge");	break;
-				default: logger.error("Invalid brower."); 					return;
+				case "chrome"	: capabilities.setBrowserName("chrome");		break;
+				case "edge"		: capabilities.setBrowserName("MicrosoftEdge");	break;
+				case "firefox"	: capabilities.setBrowserName("firefox");		break;	
+				default			: logger.error("Invalid brower."); 				return;
 			}
 			
 			driver = new RemoteWebDriver(new URL(property.readProperty("remoteHubURL")), capabilities);
@@ -56,10 +58,10 @@ public class BaseClass {
 		
 		if(property.readProperty("execution_env").equalsIgnoreCase("local")) {
 			switch(browser.toLowerCase()) {
-				case "chrome": driver = new ChromeDriver();		break;
-				case "firefox" : driver = new FirefoxDriver();	break;
-				case "edge" : driver = new EdgeDriver(); 		break;
-				default: logger.error("Invalid brower."); 		return;
+				case "chrome"	: driver = new ChromeDriver();		break;
+				case "firefox" 	: driver = new FirefoxDriver();		break;
+				case "edge" 	: driver = new EdgeDriver(); 		break;
+				default			: logger.error("Invalid brower."); 	return;
 			}
 		}
 		driver.manage().window().maximize();
@@ -80,7 +82,7 @@ public class BaseClass {
 	
 	public String captureScreen(String testName) {
 		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-		String targetFilePath = ".\\screenshots\\" + testName + "_" + timeStamp + ".png";
+		String targetFilePath = System.getProperty("user.dir") + "\\screenshots\\" + testName + "_" + timeStamp + ".png";
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
 		File targetFile = new File(targetFilePath);
